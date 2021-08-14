@@ -1,9 +1,41 @@
+:root{
+    --primaryColor : #9D174D;
+    --secondaryColor : #FCE7F3
+}
+
 body{
     text-align: center;
+    background-color: var(--secondaryColor);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: var(--primaryColor);
+    font-weight: bold;
 }
 
 label{
     display: block;
     padding: 1rem;
+    color: var(--primaryColor)
     /* text-align: center; */
+}
+
+input{
+    padding:0.5rem;
+    text-align: center;
+    /* margin-left: 50px; */
+
+}
+
+#btn{
+    padding: 0.2rem;
+    background-color: #FDF2F8;
+    border: 1px solid #9D174D;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px  #9D174D;
+    margin-left: 50px;
 }
