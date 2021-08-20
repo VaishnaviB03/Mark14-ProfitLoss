@@ -16,15 +16,15 @@ function submitHandler(){
 
 // to calculate profit or loss
 function calculate(Initial,Quantity,Current){
-    if(Current > Initial){
-        var profit = (Initial - Current) * Quantity
-        var profitPer = (profit / initial) * 100
-        outputMessage(`Profit is Rs.${profit} and Profit Percentage is ${profitPer}%`);
+    if(Number(Current) > Number(Initial)){
+        var profit = (Number(Initial) - Number(Current)) * Quantity
+        var profitPer = (profit / Number(Initial)) * 100
+        outputMessage(`Profit is Rs.${Math.abs(profit)} and Profit Percentage is ${Math.abs(profitPer)}%`);
     }
-    else if(Initial > Current){
-        var loss = (Current - Initial) * Quantity
-        var lossPer = (loss / initial) * 100
-        outputMessage(`Loss is Rs.${loss} and Loss Percentage is ${lossPer}%`);
+    else if(Number(Initial) > Number(Current)){
+        var loss = (Number(Current) - Number(Initial)) * Quantity
+        var lossPer = (loss / Number(Initial)) * 100
+        outputMessage(`Loss is Rs.${Math.abs(loss)} and Loss Percentage is ${Math.abs(lossPer)}%`);
     }
     else{
         outputMessage("Neither Profit nor Loss")

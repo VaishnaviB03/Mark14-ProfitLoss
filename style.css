@@ -5,7 +5,9 @@
 
 body{
     text-align: center;
-    background-color: var(--secondaryColor);
+    background-color:#F3F4F6;
+
+    /* background-color: var(--secondaryColor); */
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -38,4 +40,8 @@ input{
     border-radius: 0.5rem;
     box-shadow: 2px 2px  #9D174D;
     margin-left: 50px;
+}
+
+#output{
+    padding: 2rem;
 }
