@@ -6,9 +6,9 @@ var output = document.querySelector("#output")
 
 // To take input values
 function submitHandler(){
-    var ip = Number(initialPrice.value)
-    var curr = Number(currentPrice.value)
-    var qnty = Number(stocksQuantity.value)
+    var ip = initialPrice.value
+    var curr = currentPrice.value
+    var qnty = stocksQuantity.value
 
     calculate(ip, qnty, curr )
 }
@@ -16,15 +16,15 @@ function submitHandler(){
 
 // to calculate profit or loss
 function calculate(Initial,Quantity,Current){
-    if(Number(Current) > Number(Initial)){
-        var profit = (Number(Initial) - Number(Current)) * Quantity
-        var profitPer = (profit / Number(Initial)) * 100
-        outputMessage(`Profit is Rs.${Math.abs(profit)} and Profit Percentage is ${Math.abs(profitPer)}%`);
+    if(Current > Initial){
+        var profit = (Current - Initial) * Quantity
+        var profitPer = (profit / Initial) * 100
+    outputMessage(`Profit is Rs.${profit} and Profit Percentage is ${profitPer}%`);
     }
-    else if(Number(Initial) > Number(Current)){
-        var loss = (Number(Current) - Number(Initial)) * Quantity
-        var lossPer = (loss / Number(Initial)) * 100
-        outputMessage(`Loss is Rs.${Math.abs(loss)} and Loss Percentage is ${Math.abs(lossPer)}%`);
+    else if(Initial > Current){
+    var loss = (Initial - Current) * Quantity
+        var lossPer = (loss / Initial) * 100
+    outputMessage(`Loss is Rs.${loss} and Loss Percentage is ${lossPer}%`);
     }
     else{
         outputMessage("Neither Profit nor Loss")
